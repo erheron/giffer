@@ -1,0 +1,278 @@
+.root{
+    -fx-background: linear-gradient(to bottom right, #cc00ff, #6666ff);
+    -fx-border: none;
+}
+/*Full style for buttons - simple buttons, button-hide and button "create"*/
+.button-simple{
+    /*-fx-display: block;*/
+    -fx-box-sizing: border-box;
+    -fx-margin: 0;
+    -fx-width: 80%;
+    -fx-max-width: 200px;
+    /*-fx-background-opacity: 0.6;*/
+    -fx-background-color: rgba(255, 255, 255, 0.5);
+    -fx-background-radius: 10px;
+    -fx-text-fill: #fff;
+    -fx-text-align: center;
+    -fx-text-decoration: none;
+    -fx-letter-spacing: 1px;
+    -fx-transition: all 0.3s ease-out;
+    -fx-font-color: rgba(255, 255, 255, 0.5);
+}
+.button-simple:hover,
+.button-simple:focused,
+.button-simple:pressed{
+    /*-fx-display:block;*/
+    -fx-overflow:hidden;
+    -fx-text-transform: uppercase;
+    -fx-letter-spacing:0;
+    -fx-text-fill: black;
+    -fx-background-color: whitesmoke;
+    /*-fx-opacity: 1;*/
+    /*-fx-font-weight: bold;*/
+    -fx-border:none;
+    -fx-border-radius:10px;
+    -fx-transition: all 0.2s ease-in;
+}
+
+.button-different{
+    -fx-background-radius: 25;
+    -fx-text-fill: #f7f7f7;
+    -fx-background-color: #f9256c;
+    -fx-opacity: 0.5;
+    -fx-text-origin: 25px;
+
+    -fx-display: block;
+    -fx-box-sizing: border-box;
+    -fx-width: 80%;
+    -fx-max-width: 200px;
+    -fx-text-align: center;
+    -fx-text-decoration: none;
+    -fx-letter-spacing: 1px;
+    -fx-transition: all 0.3s ease-out;
+    -fx-font-color: rgba(255, 255, 255, 0.5);
+}
+.button-hide{
+    -fx-display: inline-block;
+    -fx-background-color: transparent;
+    -fx-border-radius: 4px;
+    -fx-border-width: 2px;
+    -fx-background-radius: 4px;
+    -fx-opacity: 0.1;
+    -fx-border-color:white;
+    -fx-text-fill: white;
+    /*-fx-width: 100px;*/
+    -fx-transition: all 0.5s ease-in;
+    -fx-cursor: pointer;
+}
+.button-hide:hover {
+    -fx-opacity: 1;
+    -fx-transition: all 0.3s ease-out;
+}
+.button-different:pressed,
+.button-different:hover,
+.button-different:focused{
+    -fx-display:block;
+    -fx-overflow:hidden;
+    -fx-text-transform: uppercase;
+    -fx-text-fill: white;
+    -fx-background-color: #f9256c;
+    -fx-font-weight: bold;
+    -fx-border:none;
+    -fx-opacity: 1;
+    -fx-border-radius:25px;
+    -fx-transition: all 0.5s ease-in;
+}
+/*Full code for menu bar and menu items*/
+.menu-simple {
+    -fx-font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif;
+    -fx-font-weight: bold;
+    -fx-background-color: #9370db;
+    -fx-border-bottom-width: 1px;
+    -fx-border-bottom-color:yellow;
+}
+.menu-simple .label{
+    -fx-text-fill: #ffffff;
+}
+.menu-simple .menu-item .label{
+    -fx-text-fill: #000;
+}
+.menu-item{
+    -fx-background-color: whitesmoke;
+    -fx-opacity:0.5;
+}
+.menu-item:hover,
+.menu-item:pressed,
+.menu-item:focused {
+    -fx-background-color: #ff1493;
+    -fx-opacity:1;
+}
+
+.menu-item:focused .label {
+    -fx-text-fill: #4b0082;
+    -fx-text-weight: bold;
+}
+/*End code for menu's*/
+
+/*Code for pane on the bottom*/
+.pane-simple{
+    -fx-background-color: transparent;
+    -fx-border-top-width:2px;
+    -fx-border-top-color:white;
+}
+
+/*Code for colorpicker*/
+.colorpicker-simple{
+    -fx-focus-traversable: false;
+    -fx-color-label-visible: false;
+    -fx-background-color: white;
+    -fx-opacity: 0.5;
+    -fx-background-radius: 15;
+    -fx-border-radius: 15;
+    -fx-border:none;
+    -fx-transition: all 0.2s ease-out;
+}
+.colorpicker-simple:pressed,
+.colorpicker-simple:hover,
+.colorpicker-simple:focused{
+    -fx-color-label-visible: false;
+    -fx-display:block;
+    -fx-overflow:hidden;
+    -fx-text-transform: uppercase;
+
+    -fx-border:none;
+    -fx-opacity: 1;
+    -fx-border-radius:25;
+    -fx-transition: all 0.5s ease-in;
+}
+/*For text field "set delay"*/
+.text-field-simple{
+    -fx-display: block;
+    -fx-box-sizing: border-box;
+    -fx-width: 80%;
+    -fx-max-width: 200px;
+    -fx-opacity: 0.5;
+    -fx-background-color: rgba(255, 255, 255, 0.5);
+    -fx-text-fill: #000000;
+    -fx-text-align: center;
+    -fx-text-decoration: none;
+    -fx-letter-spacing: 1px;
+    -fx-transition: all 0.3s ease-out;
+    -fx-font-color: black;
+}
+.text-field-simple:hover,
+.text-field-simple:pressed,
+.text-field-simple:focused{
+    -fx-display:block;
+    -fx-overflow:hidden;
+    -fx-text-transform: uppercase;
+    -fx-letter-spacing:0;
+
+    -fx-opacity:1;
+    -fx-text-fill: black;
+    -fx-background-color: white;
+}
+/*Code for distinguished "choose mode" menu*/
+.menubutton{
+    -fx-display: block;
+    -fx-box-sizing: border-box;
+    -fx-width: 80%;
+    -fx-max-width: 200px;
+    -fx-background-opacity: 0.6;
+    -fx-background-color: rgba(255, 255, 255, 0.5);
+    -fx-background-radius: 10px;
+    -fx-text-fill: #fff;
+    -fx-text-align: center;
+    -fx-text-decoration: none;
+    -fx-letter-spacing: 1px;
+    -fx-transition: all 0.5s ease-out;
+    -fx-font-color: white;
+    -fx-text-color: white;
+    -fx-color-label-visible: white;
+}
+.menubutton .label{
+    -fx-text-fill: #fff;
+}
+.menubutton:pressed,
+.menubutton:hover,
+.menubutton:focused{
+    -fx-display:block;
+    -fx-overflow:hidden;
+    -fx-text-transform: uppercase;
+
+    -fx-border:none;
+    -fx-background-color: white;
+    -fx-text-color:black;
+    -fx-font-color:black;
+    -fx-opacity: 1;
+    -fx-border-radius:10px;
+    -fx-transition: all 0.5s ease-in;
+}
+.menubutton:pressed .label,
+.menubutton:hover .label,
+.menubutton:focused .label{
+    -fx-text-fill: #000;
+}
+
+.check-box{
+    -fx-font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif;
+    -fx-text-fill:#fff;
+    -fx-font-size: 13px;
+    -fx-border:none;
+}
+
+.check-box .box {
+    -fx-background-color: white;
+    -fx-border:none;
+    -fx-opacity: 0.5;
+}
+.check-box .box:hover{
+    -fx-opacity: 1;
+}
+.check-box:selected .mark {
+    -fx-background-color: black;
+
+}
+
+.check-box:selected .box {
+    -fx-background-color: yellow;
+}
+.checkmark {
+    -fx-position: absolute;
+    -fx-top: 0;
+    -fx-left: 0;
+    -fx-height: 25px;
+    -fx-width: 25px;
+    -fx-background-color: #eee;
+}
+.checkmark:after {
+    -fx-content: "";
+    -fx-position: absolute;
+    -fx-display: none;
+}
+.label{
+    -fx-text-fill: white;
+}
+/*TODO -problem with working area styling*/
+.workingArea{
+    -fx-background-color: transparent;
+    /*-fx-opacity:0.5;*/
+    -fx-border-color: #660088;
+    -fx-border-width: 4px;
+}
+.borderpane{
+    -fx-background-color: transparent;
+}
+/*TODO:progress bar styling*/
+.progress-bar >.track {
+    -fx-text-box-border: #660088;
+    -fx-control-inner-background: white;
+}
+.progress-bar > .bar{
+    -fx-background-color: #660088;
+}
+.progress-bar{
+    -fx-background-radius: 5px;
+}
+.
+

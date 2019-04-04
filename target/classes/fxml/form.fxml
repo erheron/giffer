@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ColorPicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="rootAnchorPane" focusTraversable="true" onMouseDragExited="#globalDragExit" prefHeight="740.0" prefWidth="729.0000999999975" styleClass="root" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.poproject.app.MainController">
+    <children>
+        <BorderPane fx:id="mainBorderPane" prefHeight="527.9999000000025" prefWidth="665.0" styleClass="borderpane" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <center>
+                <ImageView id="" fx:id="mainImageView" fitHeight="410.50006103515625" fitWidth="410.50006103515625" pickOnBounds="true" preserveRatio="true">
+                    <BorderPane.margin>
+                        <Insets fx:id="x3" />
+                    </BorderPane.margin>
+                    <!--<image>
+                        <Image url="com/poproject/app/logo.png" />
+                    </image>-->
+                </ImageView>
+            </center>
+            <right>
+                <VBox fx:id="mainVBox" prefHeight="451.0" prefWidth="245.0" snapToPixel="false" styleClass="vbox">
+                    <children>
+                        <AnchorPane fx:id="localAnchorPane" prefHeight="162.0" prefWidth="235.0" styleClass="workingArea">
+                            <children>
+                                <TextField fx:id="delayField" focusTraversable="false" layoutX="108.0" layoutY="2.0" onDragExited="#textFieldDragExited" onKeyPressed="#delayFieldKeyPressed" onMouseDragExited="#textFieldMouseExited" onMouseExited="#textFieldMouseExited" prefHeight="25.0" prefWidth="103.0" styleClass="text-field-simple" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="5.0">
+                           <font>
+                              <Font name="Monospaced Regular" size="13.0" />
+                           </font></TextField>
+                                <CheckBox fx:id="transparentBox" focusTraversable="false" layoutX="7.0" layoutY="51.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="104.0" text="Transparent" AnchorPane.leftAnchor="7.0" />
+                                <ColorPicker fx:id="colorTransparent" focusTraversable="false" layoutX="139.0" layoutY="51.0" prefHeight="25.0" prefWidth="82.0" styleClass="colorpicker-simple" AnchorPane.rightAnchor="14.0" />
+                        <Label fx:id="setDelayLabel" layoutX="23.0" layoutY="15.0" prefHeight="25.0" text="Set delay:" AnchorPane.leftAnchor="7.0" AnchorPane.topAnchor="5.0">
+                           <font>
+                              <Font name="DejaVu Sans Bold" size="14.0" />
+                           </font>
+                        </Label>
+                            </children>
+                            <VBox.margin>
+                                <Insets right="10.0" fx:id="x33" />
+                            </VBox.margin>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="284.0" prefWidth="235.0">
+                            <children>
+                                <CheckBox fx:id="repeatBox" focusTraversable="false" layoutX="7.0" layoutY="56.0" mnemonicParsing="false" prefHeight="35.0" text="Repeat" AnchorPane.leftAnchor="7.0" />
+                                <CheckBox fx:id="loopCheckBox" focusTraversable="false" layoutX="140.0" layoutY="56.0" mnemonicParsing="false" prefHeight="35.0" text="LOOOOP" AnchorPane.rightAnchor="14.0" />
+                                <Button fx:id="createButton" focusTraversable="false" layoutX="7.0" layoutY="206.0" mnemonicParsing="false" onAction="#createButtonOnAction" prefHeight="64.0" prefWidth="214.0" styleClass="button-different" text="CREATE" AnchorPane.leftAnchor="7.0" AnchorPane.rightAnchor="14.0">
+                                    <font>
+                                        <Font name="DejaVu Sans Bold" size="31.0" />
+                                    </font></Button>
+                                <MenuButton fx:id="chooseGIFmode" focusTraversable="false" layoutX="7.0" layoutY="99.0" mnemonicParsing="false" prefHeight="25.0" styleClass="menubutton" text="Choose GIF mode" textOverrun="CLIP" AnchorPane.leftAnchor="7.0" AnchorPane.rightAnchor="14.0">
+                                    <items>
+                                        <MenuItem fx:id="gifmodeSingleImage" mnemonicParsing="false" onAction="#gifmodeSingleImageOnAction" text="Single image" />
+                                        <MenuItem fx:id="gifmodeMultiImage" mnemonicParsing="false" onAction="#gifmodeMultiImageOnAction" text="Multi-image" />
+                                        <MenuItem fx:id="gifmodeSimpleGif" mnemonicParsing="false" onAction="#gifmodeSimpleGifOnAction" text="Simple Gif" />
+                                    </items>
+                                    <font>
+                                        <Font name="DejaVu Sans Bold" size="13.0" />
+                                    </font>
+                                </MenuButton>
+                        <MenuButton fx:id="chooseWarp" focusTraversable="false" layoutX="7.0" layoutY="134.0" mnemonicParsing="false" styleClass="menubutton" text="Choose warp" AnchorPane.leftAnchor="7.0" AnchorPane.rightAnchor="14.0">
+                          <items>
+                                        <MenuItem fx:id="gifWarpRotate" mnemonicParsing="false" onAction="#gifWarpRotateOnAction" text="Rotate" />
+                                        <MenuItem fx:id="gifWarpFunnyRotate" mnemonicParsing="false" onAction="#gifWarpFunnyRotateOnAction" text="Funny Rotate" />
+                              <MenuItem fx:id="gifWarpExpand" mnemonicParsing="false" onAction="#gifWarpExpandOnAction" text="Expand" />
+                              <MenuItem fx:id="gifWarpId" mnemonicParsing="false" onAction="#gifWarpIdOnAction" text="Identity" />
+                          </items>
+                           <font>
+                              <Font name="DejaVu Sans Bold" size="13.0" />
+                           </font>
+                        </MenuButton>
+                        <MenuButton fx:id="chooseMorphism" focusTraversable="false" layoutX="7.0" layoutY="169.0" mnemonicParsing="false" prefHeight="25.0" styleClass="menubutton" text="Choose morphism" AnchorPane.leftAnchor="7.0" AnchorPane.rightAnchor="14.0">
+                           <font>
+                              <Font name="DejaVu Sans Bold" size="13.0" />
+                           </font>
+                           <items>
+                               <MenuItem fx:id="gifMorphismSmBlurr" mnemonicParsing="false" onAction="#gifMorphismSmBlurrOnAction" text="Blurr mean" />
+                               <MenuItem fx:id="gifMorphismSqrMean" mnemonicParsing="false" onAction="#gifMorphismSqrMeanOnAction" text="Square mean" />
+                              <MenuItem fx:id="gifMorphismLinMean" mnemonicParsing="false" onAction="#gifMorphismLinMeanOnAction" text="Linear mean" />
+                           </items>
+                        </MenuButton>
+                        <TextField fx:id="gifWidthField" focusTraversable="false" layoutX="17.0" layoutY="14.0" onKeyPressed="#gifWidthKeyPressed" prefHeight="26.0" prefWidth="100.0" promptText="GIF height" styleClass="text-field-simple" AnchorPane.leftAnchor="7.0" />
+                        <TextField fx:id="gifHeightField" focusTraversable="false" layoutX="141.0" layoutY="14.0" onKeyPressed="#gifHeightKeyPressed" prefHeight="26.0" prefWidth="100.0" promptText="GIF width" styleClass="text-field-simple" AnchorPane.rightAnchor="14.0" />
+                            </children>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                     <padding>
+                        <Insets left="5.0" right="5.0" />
+                     </padding></AnchorPane>
+                    </children>
+                    <BorderPane.margin>
+                        <Insets top="48.0" />
+                    </BorderPane.margin>
+                </VBox>
+            </right>
+            <top>
+                <MenuBar styleClass="menu-simple">
+                    <menus>
+                        <Menu mnemonicParsing="false" text="File">
+                            <items>
+                                <MenuItem fx:id="menuOpen" accelerator="Ctrl+O" mnemonicParsing="false" onAction="#menuOpenOnAction" text="Open" />
+                                <MenuItem fx:id="menuOpenFromURL" accelerator="Ctrl + U" mnemonicParsing="false" onAction="#menuOpenFromURLonAction" text="Open from URL" />
+                                <MenuItem fx:id="menuSaveAs" accelerator="Ctrl + S" mnemonicParsing="false" onAction="#menuSaveAsOnAction" text="Save As" />
+                                <MenuItem fx:id="menuExit" accelerator="Ctrl + X" mnemonicParsing="false" onAction="#menuExitOnAction" text="Exit" />
+                            </items>
+                        </Menu>
+                        <Menu mnemonicParsing="false" text="GIF">
+                            <items>
+                                <MenuItem fx:id="menuPreview" accelerator="Ctrl+P" mnemonicParsing="false" onAction="#menuPreviewOnAction" text="Preview" />
+                            </items>
+                        </Menu>
+                  <Menu fx:id="menuEdit" mnemonicParsing="false" text="Edit">
+                    <items>
+                      <MenuItem fx:id="menuClearAll" mnemonicParsing="false" onAction="#menuClearAllOnAction" text="Clear all images" />
+                    </items>
+                  </Menu>
+                        <Menu mnemonicParsing="false" text="Help">
+                            <items>
+                                <MenuItem fx:id="menuHelpAbout" mnemonicParsing="false" onAction="#menuHelpAboutOnAction" text="About" />
+                            </items>
+                        </Menu>
+                    </menus>
+                </MenuBar>
+            </top>
+        </BorderPane>
+        <ScrollPane fx:id="downsideScrollPane" accessibleRole="IMAGE_VIEW" fitToHeight="true" fitToWidth="true" focusTraversable="false" hbarPolicy="ALWAYS" maxHeight="-Infinity" onScroll="#scrollPaneOnScroll" pannable="true" prefHeight="180.0" styleClass="pane-simple" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <content>
+            <HBox fx:id="segmentView" onDragDetected="#albumDragStart" onDragDone="#albumDragDone" onDragDropped="#albumDragDropped" onDragExited="#albumDragExited" onDragOver="#albumDragOver" onMouseDragReleased="#albumDragReleased" prefHeight="100.0" prefWidth="200.0" />
+         </content>
+        </ScrollPane>
+      <ToggleButton fx:id="hideImagesButton" focusTraversable="false" layoutX="596.0000999999975" layoutY="525.0" mnemonicParsing="false" onAction="#hideImagesOnAction" prefHeight="32.0" styleClass="button-hide" text="Hide images" AnchorPane.rightAnchor="24.0">
+         <font>
+            <Font name="DejaVu Sans Bold" size="13.0" />
+         </font>
+      </ToggleButton>
+    </children>
+</AnchorPane>

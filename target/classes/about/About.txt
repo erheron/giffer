@@ -1,0 +1,36 @@
+Panes:
+Main Image Panel:
+    Main image used to create Single Image Gifs
+Consecutive image panel:
+    Image panel used to create Multiple Image Gifs
+
+You can move pictures on bottom panel by drag and drop.  Right click drops picture from loaded pictures, left sets image as Main Image
+
+Buttons:
+Set Delay: Sets the delay between consecutive frames
+Transparent: Drops background color
+Color: Choose the color of background
+
+GifHeight: Choose the height of gif
+GifWidth: Choose width of gif
+Repeat: Make gif run forever
+Loop: Gif goes back and forth
+Choose Gif Mode:
+    Single Image: Creates gif based on warp, uses selected image
+    Multiple Image: Creates gif based on sequence on bottom panel, using warp, and morph, to intertwine between images
+
+Choose Warp:
+    Id: Identity warp
+    Rotate: Rotate Image by 360 degrees, works best with images with uniformly coloured boundary
+    FunnyRotate: Makes a spiral
+    Expand: Moves image towards
+Choose Morphism:
+    Linear Mean: Takes linear mean of rgb colors
+    Square Mean: Takes square mean of rgb colors
+    Blurr Mean: Randomly changes pixels from one image to another
+
+Gif Creation:
+    CREATE:
+        Creates and saves image
+    Preview:
+        Creates and displays image in popup
