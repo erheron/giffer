@@ -5,7 +5,5 @@ public enum GifWarp {
     Rotate,
     FunnyRotate,
     Expand,
-    //added by @erheron
-    //TransformRotate
 
 }

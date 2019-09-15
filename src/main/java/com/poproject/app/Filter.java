@@ -33,7 +33,4 @@ public class Filter{
         }
         return res;
     }
-
-
-
 }
